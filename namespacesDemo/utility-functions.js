@@ -1,0 +1,17 @@
+var Utility;
+(function (Utility) {
+    var Fees;
+    (function (Fees) {
+        function calcFee(daysLate) {
+            return daysLate * 0.25;
+        }
+        Fees.calcFee = calcFee;
+    })(Fees = Utility.Fees || (Utility.Fees = {}));
+    function maxBookAllowed(age) {
+        return age < 12 ? 3 : 10;
+    }
+    Utility.maxBookAllowed = maxBookAllowed;
+    function privateFunc() {
+        console.log('This is private function');
+    }
+})(Utility || (Utility = {}));
